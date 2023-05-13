@@ -1,2 +1,1 @@
-# PSD_0
-esercizi sparsi programmazione e strutture dati - resto 0
+# Programmazione e Strutture Dati - resto 0

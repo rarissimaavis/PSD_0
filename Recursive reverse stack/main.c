@@ -28,7 +28,6 @@ Raffinamento: insert
     2.2 eliminalo da s
     2.3 passo ricorsivo: chiama la funzione insert su tp e s
     2.4 inserisci a in s
-
 */
 
 void insert(item tp, stack s)

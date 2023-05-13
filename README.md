@@ -2,4 +2,4 @@
 > collab con [popontino](https://github.com/Capy-spara) <3
 
 ## Esercizi sparsi
-- Recursive reverse stack
+- Recursive reverse stack 

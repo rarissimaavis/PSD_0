@@ -19,6 +19,11 @@ int main(void){
         m[1][v] = 1;
     }
     
+    for (v=0; v<=6; v++){
+        
+        m[0][v] = 10000;
+    }
+    
     
     for (i=1; i<=3; i++){
         
@@ -37,6 +42,8 @@ int main(void){
 
     printmatrix(i, v, m);
 
+    printf("min: %d\n", m[i-1][v-1]);
+
     return 0;
 }
 
@@ -48,8 +55,8 @@ int min(int a, int b){
 
 void printmatrix(int m, int V, int M[m][V]){
 	
-    for (int i = 0; i < m; i++)
-	{
+    for (int i = 0; i < m; i++){
+
 		printf("%d  ", i);
 		for (int j = 0; j < V; j++)
 		{

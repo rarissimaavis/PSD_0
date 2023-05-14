@@ -14,17 +14,13 @@ void printmatrix(int n, int V, int M[n][V])
 	{
 		printf("%d  ", i);
 		for (int j = 0; j < V; j++)
-		{
 			printf("%d ", M[i][j]);
-		}
 		printf("\n");
 	}
 }
 
-int mincoin(int c[], int n, int V) 
-{ 
-    int M[n][V];
-
+int mincoin(int c[], int n, int V, int M[n][V]) 
+{
 	for (int i = 1; i < n; i++)
 		M[i][0] = 0;
 	
@@ -36,13 +32,10 @@ int mincoin(int c[], int n, int V)
         for (int v = 1; v < V; v++) 
         {
           	if (v < c[i]) 
-          	{ 
 				M[i][v] = M[i-1][v];
-          	}
+
 			else
-			{
 				M[i][v] = min(1+M[i][v-c[i]], M[i-1][v]);
-			}
         }  
     } 
 
@@ -52,9 +45,10 @@ int mincoin(int c[], int n, int V)
 
 int main()
 {
-	int coins[] = {0, 1, 2, 4};
-	int n = sizeof(coins)/sizeof(coins[0]);
+	int c[] = {0, 1, 2, 4};
+	int n = sizeof(c)/sizeof(c[0]);
 	int V = 7;
-	printf("min: %d\n", mincoin(coins, n, V));
+	int M[n][V];
+	printf("\nLa soluzione ottima è composta da %d monete\n", mincoin(c, n, V, M));
 	return 0;
 }

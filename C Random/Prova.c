@@ -16,7 +16,7 @@ int main(void){
 
     for (v=1; v<=6; v++){
         
-        m[1][v] = 1;
+        m[1][v] = v;
     }
     
     for (v=0; v<=6; v++){

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int min(int a, int b)
 {
@@ -32,7 +31,7 @@ int mincoin(int c[], int n, int V)
 	for (int v = 1; v < V; v++)
 		M[1][v] = v;
 
-    for (int i = 1; i < n; i++) 
+    for (int i = 2; i < n; i++) 
     {
         for (int v = 1; v < V; v++) 
         {

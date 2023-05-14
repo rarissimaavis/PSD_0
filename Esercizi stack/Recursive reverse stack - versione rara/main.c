@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    printf("Reverse stack ricorsivo!\n");
+    printf("Reverse stack ricorsivo\n");
     
     stack s = newStack();
     printf("\nInserisci i dati nello stack (-1 per terminare)\n");

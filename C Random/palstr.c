@@ -43,7 +43,7 @@ int ispalrec(char *a, int i, int n){
 
     if (a[i] != a[n]) return 0;
 
-    if (n < i + 1) return ispalrec(a, i+1, n-1);
+    if (n > i + 1) return ispalrec(a, i+1, n-1);
 
     return 1;
 }

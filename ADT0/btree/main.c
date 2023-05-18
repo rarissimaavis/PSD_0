@@ -22,6 +22,7 @@ int main( void )
 	postOrder(h);
 	printf("\nINORDER: ");
 	inOrder(h);
+	printf("\n");
 	
 	return 0;
 }

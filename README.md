@@ -6,3 +6,6 @@
 - ADT1: implementazioni ADT resto 1
 ## Esercizi stack
 - Recursive reverse stack 
+## C random
+- min coin change problem
+- divide et impera su alberi

@@ -6,7 +6,7 @@
 
 int main( void ){
 
-	int nodes = 0;
+	int nodes = 0, depth= 0;
 
 	BTree h,a,c,d,l,p,s,o,q;
 	d=buildTree(NULL,NULL,"d");
@@ -26,7 +26,7 @@ int main( void ){
 	inOrder(h);
 	printf("\n");
 
-	nodes = heightNodes(h, nodes);
+	nodes = numNodes(h, nodes, depth);
 	printf("Number of nodes: %d\n" ,nodes);
 	
 	return 0;

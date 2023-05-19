@@ -90,23 +90,27 @@ void inOrder(BTree btree)
 	}
 }
 
-int heightNodes(BTree btree, int nodes){
+int numNodes(BTree btree, int nodes, int depth){
 	
 	int l = 0, r = 0;
 	
+	
 	if (!isEmptyTree(btree)){
 
-		if (!isEmptyTree(btree->left))
-			l = heightNodes(btree->left, nodes);
+		depth++;
 
-		if (!isEmptyTree(btree->right))
-			r = heightNodes(btree->right, nodes);
+		if (!isEmptyTree(getLeft(btree)))
+			l = numNodes(getLeft(btree), nodes, depth);
+
+		if (!isEmptyTree(getRight(btree)))
+			r = numNodes(getRight(btree), nodes, depth);
 
 		nodes++;
 		
 		nodes += l + r;
 
 	}
+
 
 	return nodes;
 }

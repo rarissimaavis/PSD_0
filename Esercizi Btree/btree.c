@@ -90,20 +90,19 @@ void inOrder(BTree btree)
 	}
 }
 
-int numNodes(BTree btree, int nodes, int depth){
+int numNodes(BTree btree, int nodes){
 	
 	int l = 0, r = 0;
 	
 	
 	if (!isEmptyTree(btree)){
 
-		depth++;
 
 		if (!isEmptyTree(getLeft(btree)))
-			l = numNodes(getLeft(btree), nodes, depth);
+			l = numNodes(getLeft(btree), nodes);
 
 		if (!isEmptyTree(getRight(btree)))
-			r = numNodes(getRight(btree), nodes, depth);
+			r = numNodes(getRight(btree), nodes);
 
 		nodes++;
 		
@@ -113,4 +112,21 @@ int numNodes(BTree btree, int nodes, int depth){
 
 
 	return nodes;
+}
+
+
+int depthTree(BTree btree, int depth){
+
+	int l = 0, r = 0;
+
+	if(isEmptyTree(getLeft(btree)) && isEmptyTree(getRight(btree)))
+		return 0;
+
+	l = depthTree(getLeft(btree), depth);
+	r = depthTree(getRight(btree), depth);
+
+	if (l > r) depth = l + 1; else depth= r + 1;
+
+	return depth; 
+
 }

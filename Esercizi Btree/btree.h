@@ -13,7 +13,8 @@ void postOrder(BTree);
 void inOrder(BTree);
 
 
-int numNodes(BTree, int nodes, int depth);
+int numNodes(BTree, int nodes);
+int depthTree(BTree, int depth);
 void preOrderit(BTree);
 void postOrderit(BTree);
 void inOrderit(BTree);

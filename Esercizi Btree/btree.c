@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "item.h"
 #include "btree.h"
-
+#include "stack.h"
 
 
 
@@ -90,12 +90,11 @@ void inOrder(BTree btree)
 		inOrder(btree->right);
 	}
 }
-/*
+
 void inOrderit(BTree btree){
 
 	Stack s = newStack();
-	BTree current = newTree();
-	current = btree;
+	BTree * current = &btree;
 
 	
 	while (current || s){
@@ -111,7 +110,7 @@ void inOrderit(BTree btree){
 		current = getRight(current);
 	}
 }
-*/
+
 
 int numNodes(BTree btree, int nodes){
 	

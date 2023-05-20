@@ -5,6 +5,7 @@
 
 
 
+
 struct node
 {
 	Item value;
@@ -89,6 +90,28 @@ void inOrder(BTree btree)
 		inOrder(btree->right);
 	}
 }
+/*
+void inOrderit(BTree btree){
+
+	Stack s = newStack();
+	BTree current = newTree();
+	current = btree;
+
+	
+	while (current || s){
+		 while (!isEmptyTree(current)){ 
+
+			push(s, current);
+			current = getLeft(current);
+	 	}
+
+		current = top(s); 
+		pop(s);
+		outputItem(current);
+		current = getRight(current);
+	}
+}
+*/
 
 int numNodes(BTree btree, int nodes){
 	

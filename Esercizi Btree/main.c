@@ -25,6 +25,7 @@ int main( void ){
 	printf("\nINORDER: ");
 	inOrder(h);
 	printf("\n");
+	printf("\n");
 
 	nodes = numNodes(h, nodes);
 	depth = depthTree(h, depth);

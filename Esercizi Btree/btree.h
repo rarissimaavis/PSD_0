@@ -18,7 +18,4 @@ int depthTree(BTree, int depth);
 void preOrderit(BTree);
 void postOrderit(BTree);
 void inOrderit(BTree);
-void preOrderec(BTree);
-void postOrderec(BTree);
-void inOrderec(BTree);
 void levelOrder(BTree);

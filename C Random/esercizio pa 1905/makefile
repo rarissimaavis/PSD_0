@@ -11,4 +11,4 @@ main.o: main.c item.o Btree.o
 	gcc -c main.c item.o Btree.o
 	 
 clean:
-	rm *o
+	rm *o *exe

@@ -8,4 +8,5 @@
 - Recursive reverse stack 
 ## C random
 - min coin change problem
+- knapsack problem
 - divide et impera su alberi

@@ -15,7 +15,7 @@ void inOrder(BTree);
 
 int numNodes(BTree, int nodes);
 int depthTree(BTree, int depth);
-int count(BTree, int elem);
+int count(BTree, Item elem);
 void preOrderit(BTree);
 void postOrderit(BTree);
 void inOrderit(BTree);

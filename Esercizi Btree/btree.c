@@ -143,6 +143,30 @@ int numNodes(BTree btree, int nodes){
 	return nodes;
 }
 
+int elemSum(BTree btree){
+
+	int l = 0, r = 0, sum = 0;
+	
+	
+	if (!isEmptyTree(btree)){
+
+
+		if (!isEmptyTree(getLeft(btree)))
+			l = elemSum(getLeft(btree));
+
+		if (!isEmptyTree(getRight(btree)))
+			r = elemSum(getRight(btree));
+
+		sum = atoi(getBTreeRoot(btree));
+		
+		sum += l + r;
+
+	}
+
+	return sum;
+
+}
+
 
 int depthTree(BTree btree, int depth){
 

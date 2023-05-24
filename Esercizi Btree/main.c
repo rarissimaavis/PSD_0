@@ -6,7 +6,7 @@
 
 int main( void ){
 
-	int nodes = 0, depth = 0, x = 0;
+	int nodes = 0, depth = 0, x = 0, y = 0;
 	Item elem = "a";
 
 	BTree h,a,c,d,l,p,s,o,q;
@@ -31,9 +31,9 @@ int main( void ){
 
 	nodes = numNodes(h, nodes);
 	depth = depthTree(h, depth);
-	
 	x = count(h, elem);
-	printf("Number of nodes: %d\nTree depth: %d\nIstances of %s: %d\n" ,nodes, depth, elem, x);
+	y = elemSum(h);
+	printf("Number of nodes: %d\nTree depth: %d\nIstances of %s: %d\nSum of elements: %d\n" ,nodes, depth, elem, x, y);
 	
 	return 0;
 }

@@ -90,26 +90,33 @@ void inOrder(BTree btree)
 		inOrder(btree->right);
 	}
 }
-
+/*
 void inOrderit(BTree btree){
 
 	Stack s = newStack();
-	BTree * current = &btree;
-
+	BTree left, right;
+	left = btree;
+	Item out;
 	
-	while (current || s){
-		 while (!isEmptyTree(current)){ 
+	while (left || right){
 
-			push(s, current);
-			current = getLeft(current);
+
+		while (!isEmptyTree(left)){ 
+
+			push(s, getBTreeRoot(left));
+			left = getLeft(left);
 	 	}
 
-		current = top(s); 
+		out = top(s); 
 		pop(s);
-		outputItem(current);
-		current = getRight(current);
+			
+		outputItem(out);
+
+		btree = (getRight(*current));
+		current= &btree;
 	}
 }
+*/
 
 
 int numNodes(BTree btree, int nodes){
@@ -150,5 +157,12 @@ int depthTree(BTree btree, int depth){
 	if (l > r) depth = l + 1; else depth= r + 1;
 
 	return depth; 
+
+}
+
+int count(BTree btree, int elem){
+
+
+
 
 }

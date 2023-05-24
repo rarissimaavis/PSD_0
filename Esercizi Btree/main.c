@@ -7,6 +7,7 @@
 int main( void ){
 
 	int nodes = 0, depth = 0, x = 0;
+	Item elem = "a";
 
 	BTree h,a,c,d,l,p,s,o,q;
 	d=buildTree(NULL,NULL,"d");
@@ -30,8 +31,9 @@ int main( void ){
 
 	nodes = numNodes(h, nodes);
 	depth = depthTree(h, depth);
-	x = count(h, "a");
-	printf("Number of nodes: %d\nTree depth: %d\n" ,nodes, depth);
+	
+	x = count(h, elem);
+	printf("Number of nodes: %d\nTree depth: %d\nIstances of %s: %d\n" ,nodes, depth, elem, x);
 	
 	return 0;
 }

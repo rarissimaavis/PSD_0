@@ -162,7 +162,18 @@ int depthTree(BTree btree, int depth){
 
 int count(BTree btree, Item elem){
 
+	int x = 0, tmpl = 0, tmpr = 0;
 
+	if (!isEmptyTree(btree)){
 
+		tmpl = count(getLeft(btree), elem);
+		tmpr = count(getRight(btree), elem);
 
+		if (getBTreeRoot(btree) == elem) x++;
+
+		x += tmpl + tmpr;
+
+	}
+
+	return x;
 }

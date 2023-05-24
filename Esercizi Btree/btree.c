@@ -169,7 +169,7 @@ int count(BTree btree, Item elem){
 		tmpl = count(getLeft(btree), elem);
 		tmpr = count(getRight(btree), elem);
 
-		if (getBTreeRoot(btree) == elem) x++;
+		if (cmpItem(getBTreeRoot(btree), elem) == 0) x++;
 
 		x += tmpl + tmpr;
 

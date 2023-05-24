@@ -9,7 +9,7 @@ int main( void ){
 	int nodes = 0, depth = 0, x = 0;
 
 	BTree h,a,c,d,l,p,s,o,q;
-	/*d=buildTree(NULL,NULL,"d");
+	d=buildTree(NULL,NULL,"d");
 	o=buildTree(NULL,NULL,"o");
 	q=buildTree(NULL,NULL,"q");
 	p=buildTree(NULL,NULL,"p");
@@ -17,16 +17,7 @@ int main( void ){
 	l=buildTree(o,q,"l");
 	a=buildTree(d,l,"a");
 	c=buildTree(p,s,"c");
-	h=buildTree(a,c,"h");*/
-	d=buildTree(NULL,NULL,"1");
-	o=buildTree(NULL,NULL,"2");
-	q=buildTree(NULL,NULL,"3");
-	p=buildTree(NULL,NULL,"4");
-	s=buildTree(NULL,NULL,"5");
-	l=buildTree(o,q,"6");
-	a=buildTree(d,l,"7");
-	c=buildTree(p,s,"8");
-	h=buildTree(a,c,"9");
+	h=buildTree(a,c,"h");
 	printf("PREORDER: ");
 	preOrder(h);
 	printf("\nPOSTORDER: ");
@@ -34,10 +25,12 @@ int main( void ){
 	printf("\nINORDER: ");
 	inOrder(h);
 	printf("\n");
+	//inOrderit(h);
+	printf("\n");
 
 	nodes = numNodes(h, nodes);
 	depth = depthTree(h, depth);
-	x = count(h, 2);
+	x = count(h, "a");
 	printf("Number of nodes: %d\nTree depth: %d\n" ,nodes, depth);
 	
 	return 0;

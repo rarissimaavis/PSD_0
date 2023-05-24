@@ -160,7 +160,7 @@ int depthTree(BTree btree, int depth){
 
 }
 
-int count(BTree btree, int elem){
+int count(BTree btree, Item elem){
 
 
 

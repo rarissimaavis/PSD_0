@@ -90,33 +90,29 @@ void inOrder(BTree btree)
 		inOrder(btree->right);
 	}
 }
-/*
-void inOrderit(BTree btree){
+
+
+void preOrderit(BTree btree){
+
+	if (isEmptyTree(btree)) return;
 
 	Stack s = newStack();
-	BTree left, right;
-	left = btree;
-	Item out;
-	
-	while (left || right){
+	push(s, btree);
 
+	while (!isEmptyStack(s)){
 
-		while (!isEmptyTree(left)){ 
+		BTree nodo = top(s);
 
-			push(s, getBTreeRoot(left));
-			left = getLeft(left);
-	 	}
+		printf("%s " ,getBTreeRoot(nodo));
 
-		out = top(s); 
 		pop(s);
-			
-		outputItem(out);
 
-		btree = (getRight(*current));
-		current= &btree;
+		if(getRight(nodo)) push(s, getRight(nodo));
+
+		if(getLeft(nodo)) push(s, getLeft(nodo));
 	}
+	printf("\n");
 }
-*/
 
 
 int numNodes(BTree btree, int nodes){

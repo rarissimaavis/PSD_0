@@ -20,13 +20,13 @@ int main( void ){
 	c=buildTree(p,s,"c");
 	h=buildTree(a,c,"h");
 	printf("PREORDER: ");
-	preOrder(h);
+	
+    preOrder(h);
 	printf("\nPOSTORDER: ");
 	postOrder(h);
 	printf("\nINORDER: ");
 	inOrder(h);
 	printf("\n");
-	//inOrderit(h);
 	printf("\n");
 
 	nodes = numNodes(h, nodes);

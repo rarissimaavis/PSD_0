@@ -8,3 +8,4 @@ int push(Stack, Item);
 int pop(Stack);
 Item top(Stack);
 void printStack(Stack);
+int RevRecStack(Stack s, int n);

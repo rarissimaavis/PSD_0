@@ -103,7 +103,7 @@ void preOrderit(BTree btree){
 
 		BTree nodo = top(s);
 
-		printf("%s " ,getBTreeRoot(nodo));
+		outputItem(getBTreeRoot(nodo));
 
 		pop(s);
 

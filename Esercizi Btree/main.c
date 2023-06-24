@@ -30,18 +30,22 @@ int main( void ){
 	printf(" %d", n);
 */
 	
-//	BTree h,a,c,d,l,p,s,o,q;
-	BTree a,b,c,d,e,f,g,h,i;
+//  BTree h,a,c,d,l,p,s,o,q;
+    BTree a,b,c,d,e,f,g,h,i;
+
 	
-	a=buildTree(b,c,"/");
-	b=buildTree(d,e,"-");
-	c=buildTree(f,g,"*");
-	d=buildTree(h,i,"+");
 	e=buildTree(NULL,NULL,"1");
 	f=buildTree(NULL,NULL,"6");
 	g=buildTree(NULL,NULL,"2");
 	h=buildTree(NULL,NULL,"11");
 	i=buildTree(NULL,NULL,"14");
+	d=buildTree(h,i,"+");
+	c=buildTree(f,g,"*");
+	b=buildTree(d,e,"-");
+	a=buildTree(b,c,"/");
+
+
+
 
 
 
@@ -54,7 +58,8 @@ int main( void ){
 	a=buildTree(d,l,"a");
 	c=buildTree(p,s,"c");
 	h=buildTree(a,c,"h");
-	printf("PREORDER: ");*/
+	printf("PREORDER: ");
+*/
 
 	inOrder(a);
 

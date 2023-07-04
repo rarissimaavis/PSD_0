@@ -12,7 +12,8 @@ void preOrder(BTree);
 void postOrder(BTree);
 void inOrder(BTree);
 
-
+int figliun(BTree);
+int fogliek(Btree);
 int numNodes(BTree, int nodes);
 int depthTree(BTree, int depth);
 int count(BTree, Item elem);

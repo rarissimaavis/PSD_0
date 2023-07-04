@@ -197,3 +197,16 @@ int count(BTree btree, Item elem){
 
 	return x;
 }
+
+
+int figliun(BTree btree){
+
+	if(isEmptyTree(btree)) return 0;
+
+	if( (!isEmptyTree(getLeft(btree)) && isEmptyTree(getRight(btree))) || (!isEmptyTree(getRight(btree)) && isEmptyTree(getLeft(btree))) ){
+
+		return 1 + figliun(getLeft(btree)) + figliun(getRight(btree));
+	}
+	
+	return figliun(getLeft(btree)) + figliun(getRight(btree));
+}

@@ -4,11 +4,11 @@
 #include "stack.h"
 
 /*
-Dato un albero binario in cui è memorizzata un’espressione aritmetica in forma infissa, scrivere una
-funzione che risalga all’espressione originale.
-Un albero memorizza la forma infissa di un’espressione nel modo seguente, gli operandi sono
-inseriti in ordine di apparizione nelle foglie, gli operatori nelle radici.
-Spiegare nei commenti il funzionamento dell’algoritmo applicato
+1. contare i figli unici di un albero
+2. dati due stack inserire il secondo stack al centro del primo (il secondo stack deve rimanere invariato)
+3. contare i figli sinistri di un albero
+4. date due code, eliminare dalla coda 1 gli elementi che non sono presenti nella coda 2
+5. Fogliek(Btree T, int k) La funzione conta il numero di foglie (se presenti) al livello k, restituendolo
 */
 
 int main( void ){
@@ -34,20 +34,15 @@ int main( void ){
     BTree a,b,c,d,e,f,g,h,i;
 
 	
-	e=buildTree(NULL,NULL,"1");
+	//e=buildTree(NULL,NULL,"1");
 	f=buildTree(NULL,NULL,"6");
 	g=buildTree(NULL,NULL,"2");
 	h=buildTree(NULL,NULL,"11");
 	i=buildTree(NULL,NULL,"14");
 	d=buildTree(h,i,"+");
 	c=buildTree(f,g,"*");
-	b=buildTree(d,e,"-");
+	b=buildTree(d,NULL,"-");
 	a=buildTree(b,c,"/");
-
-
-
-
-
 
 /*	d=buildTree(NULL,NULL,"d");
 	o=buildTree(NULL,NULL,"o");
@@ -61,7 +56,9 @@ int main( void ){
 	printf("PREORDER: ");
 */
 
-	inOrder(a);
+	n = figliun(a);
+
+	printf("Figli unici: %d\n", n);
 
 	/*
 	nodes = numNodes(h, nodes);

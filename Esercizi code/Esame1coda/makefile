@@ -1,0 +1,27 @@
+int : list item_int queue_list main 
+	gcc list.o item_int.o queue_list.o main.o -o a.exe
+
+str : item_str queue_array main 
+	gcc item_str.o queue_array.o main.o -o a.exe
+
+item_int :
+	gcc -c item_int.c
+
+item_str :
+	gcc -c item_str.c
+
+queue_list:
+	gcc -c queue_list.c
+
+queue_array:
+	gcc -c queue_array.c
+
+main : 
+	gcc -c main.c
+
+list :
+	gcc -c list.c
+
+clean : 
+	rm -f *.o *.exe
+

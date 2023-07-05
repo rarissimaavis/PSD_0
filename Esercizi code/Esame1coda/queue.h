@@ -11,3 +11,4 @@ int presenteQ(Queue, Item el);
 Queue xorQ(Queue, Queue);
 Queue andDaEl(Queue, Queue, Item el);
 void cancFinoItem(Queue, Item el);
+void cancDaItem(Queue, Item el);

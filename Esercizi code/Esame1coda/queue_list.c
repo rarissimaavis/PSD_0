@@ -72,6 +72,7 @@ Queue xorQ(Queue q, Queue w){
 		index2++;
 	}
 
+
 	for(int i = 0; i < index1; i++){
 		
 		for(int j = 0; j < index2; j++){
@@ -91,6 +92,9 @@ Queue xorQ(Queue q, Queue w){
 		if(flag == 0) enqueue(p, b[i]);
 		else flag = 0; 
 	}
+	
+	for(int i = 0; i < index1; i++) enqueue(q, a[i]);
+	for(int j = 0; j < index2; j++) enqueue(w, b[j]);
 
 	return p;
 }
@@ -120,7 +124,7 @@ Queue andDaEl(Queue q, Queue w, Item el){
 	int i, j;
 
 	Queue p = newQueue();
-	int flag = 0, flagEl = 0,index1 = 0, index2 = 0;
+	int flag = 0, flagEl = 0, index1 = 0, index2 = 0;
 
 	while(!isEmptyQueue(q)){
 		a[index1] = dequeue(q);
@@ -131,6 +135,9 @@ Queue andDaEl(Queue q, Queue w, Item el){
 		b[index2] = dequeue(w);
 		index2++;
 	}
+
+	for(int i = 0; i < index1; i++) enqueue(q, a[i]);
+	for(int j = 0; j < index2; j++) enqueue(w, b[j]);
 
 	for(i = 0; i < index1; i++){
 		if(cmpItem(a[i],el) == 0) break;
@@ -151,6 +158,26 @@ Queue andDaEl(Queue q, Queue w, Item el){
 			flag = 0;
 		}
 	}
+	
 
 	return p;
+}
+
+void cancDaItem(Queue q, Item el){
+
+	Item a[20];
+
+	int flag = 0,index = 0;
+
+	while(!isEmptyQueue(q)){
+		a[index] = dequeue(q);
+		index++;
+	}
+	
+	for(int i = 0; i < index; i++){
+		if(cmpItem(a[i],el)==0) flag = 1;
+		
+		if(flag==0)enqueue(q,a[i]);
+	}
+
 }

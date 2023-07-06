@@ -181,3 +181,86 @@ void cancDaItem(Queue q, Item el){
 	}
 
 }
+
+void estraiMaxN(Queue q, int n){
+
+	Item check[20], a[n], b[20], max;
+	int index = 0, index1 = 0, index2 = 0;
+
+	while(!isEmptyQueue(q)){
+		check[index1] = dequeue(q);
+		index1++;
+	}
+
+	for(int i = 0; i < index1; i++) enqueue(q, check[i]);
+
+	if(n > index1){printf("\nErrore: n deve essere al massimo la grandezza della coda\n"); return;}
+
+	for(int i=0; i < n; i++){
+		a[i] = dequeue(q);
+	}
+
+	max = a[0];
+
+	while(!isEmptyQueue(q)){
+		b[index2] = dequeue(q);
+		index2++;
+	}
+
+	for(int i=1; i < n; i++){
+
+		if(cmpItem(a[i],max)>0) {
+			max = a[i];
+			index = i;
+		}
+	}
+
+	for(int i=0; i < n; i++) if(i!=index) enqueue(q,a[i]);
+	
+	for(int j=0; j < index2; j++) enqueue(q, b[j]);
+}
+
+
+void inserMinN(Queue q, int n, Item el){
+
+	Item check[20], a[n], b[20], min;
+	int index = 0, index1 = 0, index2 = 0, act;
+
+	while(!isEmptyQueue(q)){
+		check[index1] = dequeue(q);
+		index1++;
+	}
+
+	for(int i = 0; i < index1; i++) enqueue(q, check[i]);
+
+	if(n > index1){printf("\nErrore: n deve essere al massimo la grandezza della coda\n"); return;}
+
+	act = index1 - n;
+
+	for(int i=0; i < act; i++){
+		b[i] = dequeue(q);
+	}
+
+	while(!isEmptyQueue(q)){
+		a[index2] = dequeue(q);
+		index2++;
+	}
+	min = a[0];
+
+	for(int i=1; i < index2; i++){
+
+		if(cmpItem(a[i],min)<0) {
+			min = a[i];
+			index = i;
+		}
+	}
+
+    for(int j=0; j < act; j++) enqueue(q, b[j]);
+
+	for(int i=0; i < n; i++){
+
+		if(i==index) enqueue(q,el);
+		
+		enqueue(q,a[i]);
+	}
+}
